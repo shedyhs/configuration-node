@@ -1,6 +1,8 @@
 import dotenv from 'dotenv';
 
+const environment = process.env.NODE_ENV || 'development';
+
 dotenv.config({
-  debug: true,
+  debug: environment !== 'production',
   path: `.env.${process.env.NODE_ENV || 'development'}`,
 });

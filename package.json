@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup src --silent --clean",
-    "start": "tsx dist/index.js",
+    "start": "NODE_ENV=production tsx dist/index.js",
     "dev": "tsx watch src/index.ts",
     "commit": "git-cz",
     "prepare": "husky install",
