@@ -5,6 +5,17 @@
   "repository": "https://github.com/shedyhs/configured.git",
   "author": "Shedy <shedyhs@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint ./",
+    "lint:fix": "yarn lint --fix",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "yarn lint:fix"
+    ]
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
@@ -14,6 +25,8 @@
     "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
     "prettier": "^2.8.4",
     "typescript": "^5.0.2"
   }
